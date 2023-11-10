@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Page Title</title>
+  <link rel="stylesheet" href="styles.css"> <!-- Link to your stylesheet -->
+  <style>
+    /* Add this additional style directly in the head or combine it with your existing stylesheet */
+
+   /* Add this to your existing CSS stylesheet or combine with the styles provided earlier */
+
+body {
+  background-color: #6a6cee;
+  color: #fff;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+form {
+  max-width: 400px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+  text-align: center;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  color: #eee;
+}
+
+input {
+  width: calc(100% - 20px);
+  padding: 10px;
+  margin-bottom: 15px;
+  box-sizing: border-box;
+  border: 1px solid #555;
+  border-radius: 4px;
+  background-color: #333;
+  color: #eee;
+}
+
+button {
+  background-color: #4caf50;
+  color: #fff;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+  </style>
+</head>
+
+<body>
+
+  <form name="PaymentForm" action="https://www.payfast.co.za/eng/process" method="post">
+    <input type="hidden" name="cmd" value="_paynow">
+    <input type="hidden" name="receiver" value="23103831">
+
+    <label for="Amount">Amount:</label>
+    <input required id="Amount" type="number" step=".01" name="amount" min="5.00" placeholder="Enter amount" value="100">
+
+    <input type="hidden" name="item_name" maxlength="255" value="Grand Capital">
+
+    <button type="submit">
+      <img src="https://my.payfast.io/images/buttons/PayNow/Dark-Large-PayNow.png" alt="Pay Now" title="Pay Now with Payfast">
+    </button>
+  </form>
+
+</body>
+
+</html>
